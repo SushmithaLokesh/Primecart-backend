@@ -13,6 +13,9 @@ connectDatabase()
 
 app.use(express.json())
 app.use(cors())
+app.get("/", (req, res) => {
+    res.send("success response...");
+  });
 app.use("/api/v1",products)
 app.use("/api/v1",orders)
 
